@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import codeRoutes from "./routes/codeRoutes.js";
+import blogRoutes from "./routes/blogRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -15,6 +16,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/codes", codeRoutes);
+app.use("/api/blogs",blogRoutes);
 
 // Root test route
 app.get("/", (req, res) => {
