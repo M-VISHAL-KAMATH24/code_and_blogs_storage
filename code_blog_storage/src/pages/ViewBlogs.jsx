@@ -47,9 +47,10 @@ const ViewBlogs = () => {
                 <button
                   onClick={async () => {
                     await fetch(
-                      `${import.meta.env.VITE_API_URL}/${blog._id}`,
-                      { method: "DELETE" }
-                    );
+  `${import.meta.env.VITE_API_URL}/api/blogs/${blog._id}`,
+  { method: "DELETE" }
+);
+
                     setBlogs(blogs.filter(b => b._id !== blog._id));
                   }}
                   className="bg-red-500 px-4 py-2 rounded-md text-sm"
