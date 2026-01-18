@@ -15,7 +15,7 @@ const BlogSection = () => {
           <div className="group relative rounded-2xl overflow-hidden border border-white/10">
             {/* Background Image */}
             <img
-              src="/images/add-blog.jpg"
+              src="/images/blog1.jpg"
               alt="Add Blog"
               className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
@@ -45,7 +45,7 @@ const BlogSection = () => {
           <div className="group relative rounded-2xl overflow-hidden border border-white/10">
             {/* Background Image */}
             <img
-              src="/images/view-blog.jpg"
+              src="/images/blog2.jpeg"
               alt="View Blogs"
               className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
             />

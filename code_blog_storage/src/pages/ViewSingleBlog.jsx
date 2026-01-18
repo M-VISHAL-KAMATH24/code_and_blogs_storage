@@ -7,7 +7,7 @@ const ViewSingleBlog = () => {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/blogs/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`)
       .then((res) => res.json())
       .then(setBlog);
   }, [id]);

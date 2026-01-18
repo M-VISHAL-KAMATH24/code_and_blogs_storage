@@ -6,7 +6,7 @@ const ViewBlogs = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs")
+    fetch(`${import.meta.env.VITE_API_URL}/api/blogs`)
       .then((res) => res.json())
       .then(setBlogs);
   }, []);
@@ -47,7 +47,7 @@ const ViewBlogs = () => {
                 <button
                   onClick={async () => {
                     await fetch(
-                      `http://localhost:5000/api/blogs/${blog._id}`,
+                      `${import.meta.env.VITE_API_URL}/${blog._id}`,
                       { method: "DELETE" }
                     );
                     setBlogs(blogs.filter(b => b._id !== blog._id));

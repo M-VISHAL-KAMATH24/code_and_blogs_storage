@@ -15,7 +15,7 @@ const CodeSection = () => {
           <div className="group relative rounded-2xl overflow-hidden border border-white/10">
             {/* Background Image */}
             <img
-              src="/images/add-code.jpg"
+              src="/images/code2.jpg"
               alt="Add Code"
               className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
@@ -45,7 +45,7 @@ const CodeSection = () => {
           <div className="group relative rounded-2xl overflow-hidden border border-white/10">
             {/* Background Image */}
             <img
-              src="/images/view-code.jpg"
+              src="/images/code1.jpg"
               alt="View Codes"
               className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
             />

@@ -9,7 +9,7 @@ const ViewCode = () => {
   useEffect(() => {
     const fetchCodes = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/codes");
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/codes`);
         const data = await res.json();
         setCodes(data);
       } catch (err) {
@@ -25,7 +25,7 @@ const ViewCode = () => {
   const deleteCode = async (id) => {
     if (!confirm("Delete this code?")) return;
 
-    await fetch(`http://localhost:5000/api/codes/${id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/codes/${id}`, {
       method: "DELETE",
     });
 

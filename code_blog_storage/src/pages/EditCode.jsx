@@ -15,7 +15,7 @@ const EditCode = () => {
   useEffect(() => {
     const fetchCode = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/codes`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/codes`);
         const data = await res.json();
         const found = data.find((item) => item._id === id);
 
@@ -42,7 +42,7 @@ const EditCode = () => {
     setSaving(true);
 
     try {
-      await fetch(`http://localhost:5000/api/codes/${id}`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/codes/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -14,7 +14,7 @@ const AddBlog = () => {
     e.preventDefault();
     setLoading(true);
 
-    await fetch("http://localhost:5000/api/blogs", {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/blogs`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, description, content }),

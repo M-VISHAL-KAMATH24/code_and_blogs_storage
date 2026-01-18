@@ -10,7 +10,7 @@ const EditBlog = () => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/blogs/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setTitle(data.title);
@@ -22,7 +22,7 @@ const EditBlog = () => {
   const updateBlog = async (e) => {
     e.preventDefault();
 
-    await fetch(`http://localhost:5000/api/blogs/${id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, description, content }),
